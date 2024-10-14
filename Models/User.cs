@@ -12,7 +12,7 @@ public class User
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         
-        public  required string Id { get; set; }
+        public   string? Id { get; set; }
 
         [BsonRequired]
         public required string Username { get; set; }
@@ -28,7 +28,7 @@ public class User
 
         public bool IsVerified { get; set; } = false;
 
-        public required string ResetPasswordToken { get; set; }
+        public  string? ResetPasswordToken { get; set; }
         public DateTime? ResetPasswordExpires { get; set; }
 
         public required string VerificationToken { get; set; }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\80133\\webAPI\\twitterclone\\twitterclone.csproj": {}
+    "c:\\Users\\80133\\webAPI\\twitterclone\\twitterclone.csproj": {}
   },
   "projects": {
-    "C:\\Users\\80133\\webAPI\\twitterclone\\twitterclone.csproj": {
+    "c:\\Users\\80133\\webAPI\\twitterclone\\twitterclone.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\80133\\webAPI\\twitterclone\\twitterclone.csproj",
+        "projectUniqueName": "c:\\Users\\80133\\webAPI\\twitterclone\\twitterclone.csproj",
         "projectName": "twitterclone",
-        "projectPath": "C:\\Users\\80133\\webAPI\\twitterclone\\twitterclone.csproj",
+        "projectPath": "c:\\Users\\80133\\webAPI\\twitterclone\\twitterclone.csproj",
         "packagesPath": "C:\\Users\\80133\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\80133\\webAPI\\twitterclone\\obj\\",
+        "outputPath": "c:\\Users\\80133\\webAPI\\twitterclone\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -61,6 +61,10 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[12.0.1, )"
+            },
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
             },
             "FluentEmail.Core": {
               "target": "Package",

@@ -106,3 +106,4 @@ C:\Users\80133\webAPI\twitterclone\obj\Debug\net8.0\twitterclone.csproj.Assembly
 C:\Users\80133\webAPI\twitterclone\obj\Debug\net8.0\twitterclone.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\80133\webAPI\twitterclone\obj\Debug\net8.0\twitterclone.sourcelink.json
 C:\Users\80133\webAPI\twitterclone\obj\Debug\net8.0\twitterc.1BA5118F.Up2Date
+c:\Users\80133\webAPI\twitterclone\bin\Debug\net8.0\BCrypt.Net-Next.dll

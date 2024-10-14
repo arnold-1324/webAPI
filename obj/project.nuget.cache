@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IYZJexQFRXY=",
+  "dgSpecHash": "NE1jlJzU7nM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\80133\\webAPI\\twitterclone\\twitterclone.csproj",
+  "projectFilePath": "c:\\Users\\80133\\webAPI\\twitterclone\\twitterclone.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\80133\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\80133\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
@@ -10,6 +10,7 @@
     "C:\\Users\\80133\\.nuget\\packages\\awssdk.extensions.netcore.setup\\3.7.301\\awssdk.extensions.netcore.setup.3.7.301.nupkg.sha512",
     "C:\\Users\\80133\\.nuget\\packages\\awssdk.s3\\3.7.404.5\\awssdk.s3.3.7.404.5.nupkg.sha512",
     "C:\\Users\\80133\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",
+    "C:\\Users\\80133\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\80133\\.nuget\\packages\\bouncycastle.cryptography\\2.4.0\\bouncycastle.cryptography.2.4.0.nupkg.sha512",
     "C:\\Users\\80133\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\80133\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",

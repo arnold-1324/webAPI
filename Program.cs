@@ -47,7 +47,7 @@ app.MapControllers();
 
 
 
-app.MapGet("/", () => "Welcome to the API!");
+//app.MapGet("/", () => "Welcome to the API!");
 
 
 if (app.Environment.IsDevelopment())
