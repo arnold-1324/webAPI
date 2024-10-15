@@ -1,37 +1,48 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using twitterclone.DTOs;
-using twitterclone.Interfaces;
+using twitterclone.Interfaces; 
 
 namespace twitterclone.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class Authcontroller : ControllerBase
+    public class AuthController : ControllerBase 
     {
-         private readonly IAuthService _authService;
+        private readonly IAuthService _authService;
 
-    public Authcontroller(IAuthService authService)
-    {
-        _authService = authService;
-    }
-
-    [HttpPost("signin")]
-    public async Task<IActionResult> SignIn([FromBody] UserSignInDots signInDto)
-    {
-        if (!ModelState.IsValid)
+        public AuthController(IAuthService authService)
         {
-            return BadRequest(ModelState);
+            _authService = authService;
         }
 
-        var result = await _authService.SignInAsync(signInDto);
-
-        if (!result.Success)
+        [HttpPost("signin")]
+        public async Task<IActionResult> SignIn([FromBody] UserSignInDots signInDto) 
         {
-            return Unauthorized(result.Message);
-        }
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
 
-        return Ok(result);
-    }
+                var result = await _authService.SignInAsync(signInDto);
+
+                if (!result.Success)
+                {
+                    return Unauthorized(result.Message);
+                }
+
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                
+            
+                return StatusCode(500, "An error occurred while processing your request."+ex);
+            }
+        }
     }
 }
+ 
+       

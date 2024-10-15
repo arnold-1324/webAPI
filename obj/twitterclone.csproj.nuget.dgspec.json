@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\80133\\webAPI\\twitterclone\\twitterclone.csproj": {}
+    "C:\\Users\\arnol\\Desktop\\DotNetweb_API\\webAPI\\twitterclone.csproj": {}
   },
   "projects": {
-    "c:\\Users\\80133\\webAPI\\twitterclone\\twitterclone.csproj": {
+    "C:\\Users\\arnol\\Desktop\\DotNetweb_API\\webAPI\\twitterclone.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\80133\\webAPI\\twitterclone\\twitterclone.csproj",
+        "projectUniqueName": "C:\\Users\\arnol\\Desktop\\DotNetweb_API\\webAPI\\twitterclone.csproj",
         "projectName": "twitterclone",
-        "projectPath": "c:\\Users\\80133\\webAPI\\twitterclone\\twitterclone.csproj",
-        "packagesPath": "C:\\Users\\80133\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\80133\\webAPI\\twitterclone\\obj\\",
+        "projectPath": "C:\\Users\\arnol\\Desktop\\DotNetweb_API\\webAPI\\twitterclone.csproj",
+        "packagesPath": "C:\\Users\\arnol\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\arnol\\Desktop\\DotNetweb_API\\webAPI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\80133\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\arnol\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -160,7 +155,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

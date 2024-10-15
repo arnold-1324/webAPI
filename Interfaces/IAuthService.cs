@@ -7,3 +7,4 @@ public interface IAuthService
    Task<AuthResultDots> SignInAsync(UserSignInDots signInDto);
    // Task<AuthResultDots> SignOutAsync(string userId);
 }
+

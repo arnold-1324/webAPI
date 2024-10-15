@@ -22,41 +22,57 @@ public class AuthService : IAuthService
 
     }
 
-    public async Task<AuthResultDots> SignInAsync(UserSignInDots signInDto)
-    {
-        var user = await _userRepository.GetUserByUsernameOrEmailAsync(signInDto.Username, signInDto.Email);
+   public async Task<AuthResultDots> SignInAsync(UserSignInDots signInDto)
+{
+    
+    var user = await _userRepository.GetUserByUsernameOrEmailAsync(signInDto.Username, signInDto.Email);
 
-        if (user.Username!=null )   
+   
+    if (user != null)
+    {
+        if (user.Username != null)
         {
             return new AuthResultDots { Success = false, Message = "Username already taken" };
         }
-        if (user.Email!= null)
+        if (user.Email != null)
         {
             return new AuthResultDots { Success = false, Message = "Email already taken" };
         }
-       
-        if (signInDto.Password!=signInDto.ConfirmPassword)
-        {
-            return new AuthResultDots { Success = false, Message = "password does't match" };
-        }
-        
-        var hashedPassword = BCrypt.Net.BCrypt.HashPassword(signInDto.Password);
-        var verificationToken = new Random().Next(100000, 999999).ToString();
-        var Newuser= new User { 
-    
-            FullName=signInDto.FullName,
-            Username = signInDto.Username,
-            Email = signInDto.Email,
-            Password = hashedPassword,
-            VerificationToken=verificationToken,
-             VerificationTokenExpiresAt=DateTime.Now.AddHours(1)
-            };
-
-           await CreateUserAsync(Newuser);
-          var token= _tokenHelper.GenerateToken(user);
-
-        return new AuthResultDots { Success = true, Token = token };
     }
+
+    
+    if (signInDto.Password != signInDto.ConfirmPassword)
+    {
+        return new AuthResultDots { Success = false, Message = "Passwords do not match" };
+    }
+
+    
+    var hashedPassword = BCrypt.Net.BCrypt.HashPassword(signInDto.Password);
+
+   
+    var verificationToken = new Random().Next(100000, 999999).ToString();
+
+    
+    var newUser = new User
+    {
+        FullName = signInDto.FullName,
+        Username = signInDto.Username,
+        Email = signInDto.Email,
+        Password = hashedPassword,
+        VerificationToken = verificationToken,
+        VerificationTokenExpiresAt = DateTime.Now.AddHours(1)
+    };
+
+    
+    await CreateUserAsync(newUser);
+
+    
+    var token = _tokenHelper.GenerateToken(newUser);
+
+   
+    return new AuthResultDots { Success = true, Token = token,Message="User Created sucesssully" };
+}
+
 
 
     private  async Task CreateUserAsync(User user){
