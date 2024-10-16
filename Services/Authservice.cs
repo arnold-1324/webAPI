@@ -2,25 +2,61 @@ using twitterclone.DTOs;
 using twitterclone.Interfaces;
 using twitterclone.Models;
 using MongoDB.Driver;
+using System.Net;
+using System.Net.Mail;
 using twitterclone.HelperClass;
+using Microsoft.Extensions.Configuration;
+
 
 namespace twitterclone.Services;
 
 public class AuthService : IAuthService
 {
     private readonly IUserRepository _userRepository;
-
+   private readonly IConfiguration _configuration;
    private readonly IMongoCollection<User> _users;
-
     private readonly TokenHelper _tokenHelper;
 
-    public AuthService(IUserRepository userRepository, IMongoDatabase database, TokenHelper tokenHelper  )
+    private readonly EmailTemplate _emailTemplate;
+    public AuthService(IUserRepository userRepository,IConfiguration configuration ,EmailTemplate emailTemplate, IMongoDatabase database, TokenHelper tokenHelper)
     {
          _users = database.GetCollection<User>("users");
         _userRepository = userRepository;
+        _configuration=configuration;
         _tokenHelper = tokenHelper;
+        _emailTemplate=emailTemplate;
+       
 
     }
+
+public async Task SendEmailAsync(EmailDto emailDto)
+{
+
+ var smtpClient = new SmtpClient
+        {
+            Host = _configuration["SmtpSettings:Server"],
+            Port = int.Parse(_configuration["SmtpSettings:Port"]),
+            EnableSsl = true,
+            Credentials = new NetworkCredential(
+                _configuration["SmtpSettings:Username"],
+                _configuration["SmtpSettings:Password"]
+            )
+        };
+
+        var mailMessage = new MailMessage
+        {
+            From = new MailAddress(_configuration["SmtpSettings:SenderEmail"], _configuration["SmtpSettings:SenderName"]),
+            Subject = emailDto.Subject,
+            Body = emailDto.Body,
+            IsBodyHtml = true
+        };
+
+        mailMessage.To.Add(emailDto.ToEmail);
+
+        await smtpClient.SendMailAsync(mailMessage);
+
+} 
+
 
    public async Task<AuthResultDots> SignInAsync(UserSignInDots signInDto)
 {
@@ -63,15 +99,51 @@ public class AuthService : IAuthService
         VerificationTokenExpiresAt = DateTime.Now.AddHours(1)
     };
 
-    
+
+var body = _emailTemplate.VerificationEmailTemplate.Replace("{verificationCode}", verificationToken);
+
+        var emailDto = new EmailDto
+        {
+            ToEmail = newUser.Email,
+            Subject = "Verify Your Email",
+            Body = body
+        };
+
+        await SendEmailAsync(emailDto);
+
+
+
     await CreateUserAsync(newUser);
+    var token =  _tokenHelper.GenerateToken(newUser);
+
+
+
+    var userDTO = new UserDTO
+{
+    Id = newUser.Id,  
+    Username = newUser.Username,
+    FullName = newUser.FullName,
+    LastLogin = newUser.LastLogin,
+    IsVerified = newUser.IsVerified,
+    Email = newUser.Email,
+    Followers = newUser.Followers,
+    Following = newUser.Following,
+    IsFrozen = newUser.IsFrozen,
+    ProfileImg = newUser.ProfileImg,
+    Bio = newUser.Bio,
+    CreatedAt = newUser.CreatedAt,
+    UpdatedAt = newUser.UpdatedAt
+};
+
 
     
-    var token = _tokenHelper.GenerateToken(newUser);
+    
+  
 
    
-    return new AuthResultDots { Success = true, Token = token,Message="User Created sucesssully" };
+    return new AuthResultDots { Success = true, Token = token,Message="User Created sucesssully",User=userDTO };
 }
+
 
 
 

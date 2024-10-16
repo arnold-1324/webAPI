@@ -21,12 +21,24 @@ builder.Services.AddSingleton<IMongoDatabase>(sp =>
 
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+//builder.Services.AddTransient<IAuthService, EmailSender>();
 
-// Inject TokenHelper with the secret from configuration
+builder.Services.AddSingleton<EmailTemplate>();
 builder.Services.AddSingleton(sp =>
 {
     var secretKey = builder.Configuration["JwtSettings:Secret"];
-    return new TokenHelper(secretKey ?? throw new InvalidOperationException("JWT Secret not found in configuration."));
+    var subject = builder.Configuration["JwtSettings:Subject"];
+    var issuer = builder.Configuration["JwtSettings:Issuer"];
+    var audience = builder.Configuration["JwtSettings:Audience"];
+    
+    
+    if (string.IsNullOrEmpty(secretKey) || string.IsNullOrEmpty(subject) || 
+        string.IsNullOrEmpty(issuer) || string.IsNullOrEmpty(audience))
+    {
+        throw new InvalidOperationException("One or more JWT settings are missing from configuration.");
+    }
+
+    return new TokenHelper(secretKey, subject, issuer, audience);
 });
 
 builder.Services.AddControllers();
