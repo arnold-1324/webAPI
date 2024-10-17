@@ -6216,26 +6216,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\arnol\\.nuget\\packages\\": {}
+    "/home/gitpod/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\arnol\\Desktop\\DotNetweb_API\\webAPI\\twitterclone.csproj",
+      "projectUniqueName": "/workspace/webAPI/twitterclone.csproj",
       "projectName": "twitterclone",
-      "projectPath": "C:\\Users\\arnol\\Desktop\\DotNetweb_API\\webAPI\\twitterclone.csproj",
-      "packagesPath": "C:\\Users\\arnol\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\arnol\\Desktop\\DotNetweb_API\\webAPI\\obj\\",
+      "projectPath": "/workspace/webAPI/twitterclone.csproj",
+      "packagesPath": "/home/gitpod/.nuget/packages/",
+      "outputPath": "/workspace/webAPI/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\arnol\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/gitpod/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -6248,11 +6246,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -6369,7 +6362,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.110/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
