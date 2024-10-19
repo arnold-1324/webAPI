@@ -19,5 +19,11 @@ namespace twitterclone.Repositories
             return await _users.Find(u => u.Username == username || u.Email == email).FirstOrDefaultAsync();
             
         }
+
+        public async Task<User> GetCurrentUserDetails(string username)
+        {
+            return await _users.Find(u=> u.Username==username).FirstOrDefaultAsync();
+            
+        }
     }
 }

@@ -42,6 +42,35 @@ namespace twitterclone.Controllers
                 return StatusCode(500, "An error occurred while processing your request."+ex);
             }
         }
+        
+         [HttpPost("Login")]
+        public async Task<IActionResult> LogIn([FromBody] UserLogin loginDto) 
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+              var result = await _authService.LogInAsync(loginDto);
+              if(!result.Success)
+              {
+                 return Unauthorized(result.Message);
+              } 
+              return Ok(result);
+
+            } 
+            catch (Exception ex)
+            {
+                
+            
+                return StatusCode(500, "An error occurred while processing your request."+ex);
+            }
+        }
+
+
+
+        
     }
 }
  

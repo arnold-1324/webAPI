@@ -84,6 +84,7 @@ public async Task SendEmailAsync(EmailDto emailDto)
 
     
     var hashedPassword = BCrypt.Net.BCrypt.HashPassword(signInDto.Password);
+    
 
    
     var verificationToken = new Random().Next(100000, 999999).ToString();
@@ -150,5 +151,53 @@ var body = _emailTemplate.VerificationEmailTemplate.Replace("{verificationCode}"
     private  async Task CreateUserAsync(User user){
         await _users.InsertOneAsync(user);
     }
+
+
+    public async Task<AuthResultDots> LogInAsync(UserLogin LoginDto)
+    {
+        var user = await _userRepository.GetCurrentUserDetails(LoginDto.Username);
+
+        if (user == null)
+        {
+            return new AuthResultDots { Success = false, Message = "User not found. Please check your username and try again." };
+        }
+
+        if (BCrypt.Net.BCrypt.Verify(LoginDto.Password, user.Password))
+        {
+            var token = _tokenHelper.GenerateToken(user);
+            var Loguser = new UserDTO
+            {
+                Id = user.Id,
+                Username = user.Username,
+                FullName = user.FullName,
+                LastLogin = user.LastLogin,
+                IsVerified = user.IsVerified,
+                Email = user.Email,
+                Followers = user.Followers,
+                Following = user.Following,
+                IsFrozen = user.IsFrozen,
+                ProfileImg = user.ProfileImg,
+                Bio = user.Bio,
+                CreatedAt = user.CreatedAt,
+                UpdatedAt = user.UpdatedAt
+
+            };
+            return new AuthResultDots { Success = true, Token = token, Message = "User logged in successfully", User = Loguser };
+
+        }
+        else
+        {
+            return new AuthResultDots { Success = false, Message = "Invalid credentials provided. Please check your username and password and try again." };
+
+        }
+
+
+
+    }
+
+    // public async Task<AuthResultDots> GetProfile(string Userid)
+    // {
+
+    // }
 
 }
