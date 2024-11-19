@@ -4,6 +4,7 @@ using System.Security.Claims;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using twitterclone.Models;
+using System.Collections.Concurrent;
 
 namespace twitterclone.HelperClass;
 
@@ -17,6 +18,7 @@ public class TokenHelper
  
  private readonly string _audience;
 
+private static readonly ConcurrentDictionary<string, DateTime> RevokedTokens = new ConcurrentDictionary<string, DateTime>();
     public TokenHelper(string secretKey,string subject,string issuer,string audience)
     {
         _secretKey = secretKey;
@@ -33,7 +35,7 @@ public class TokenHelper
         {
             new Claim(JwtRegisteredClaimNames.Sub, _subject),
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-            new Claim("userID", user.Id.ToString())
+            new Claim("userID", user.Id?.ToString())
         };
 
        
@@ -53,4 +55,54 @@ public class TokenHelper
      
         return  new JwtSecurityTokenHandler().WriteToken(token);
     }
+
+
+   public async Task<bool> RevokeTokenAsync(string token)
+{
+    if (string.IsNullOrEmpty(token))
+        return false;
+
+    try
+    {
+       
+        var tokenHandler = new JwtSecurityTokenHandler();
+        var jwtToken = tokenHandler.ReadJwtToken(token);
+        var expiry = jwtToken.ValidTo;
+
+        
+        RevokedTokens[token] = expiry;
+
+       
+        return true;
+    }
+    catch (Exception ex)
+    {
+        
+        Console.WriteLine($"Error revoking token: {ex.Message}");
+        return false;
+    }
+}
+
+       public bool IsTokenRevoked(string token)
+{
+    if (string.IsNullOrEmpty(token))
+        return true;
+
+    
+    if (RevokedTokens.TryGetValue(token, out var expiry))
+    {
+        
+        if (expiry <= DateTime.UtcNow)
+        {
+            RevokedTokens.TryRemove(token, out _); 
+            return false;
+        }
+
+        return true;
+    }
+
+    return false; 
+}
+
+
 }

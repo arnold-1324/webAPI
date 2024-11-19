@@ -6216,24 +6216,32 @@
     ]
   },
   "packageFolders": {
-    "/home/gitpod/.nuget/packages/": {}
+    "C:\\Users\\80133\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/workspace/webAPI/twitterclone.csproj",
+      "projectUniqueName": "C:\\Users\\80133\\source\\repos\\APIs\\webAPI\\twitterclone.csproj",
       "projectName": "twitterclone",
-      "projectPath": "/workspace/webAPI/twitterclone.csproj",
-      "packagesPath": "/home/gitpod/.nuget/packages/",
-      "outputPath": "/workspace/webAPI/obj/",
+      "projectPath": "C:\\Users\\80133\\source\\repos\\APIs\\webAPI\\twitterclone.csproj",
+      "packagesPath": "C:\\Users\\80133\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\80133\\source\\repos\\APIs\\webAPI\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/home/gitpod/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\80133\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -6246,6 +6254,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -6362,7 +6375,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.110/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

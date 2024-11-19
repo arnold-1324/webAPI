@@ -2,10 +2,8 @@ using twitterclone.DTOs;
 using twitterclone.Interfaces;
 using twitterclone.Models;
 using MongoDB.Driver;
-using System.Net;
-using System.Net.Mail;
 using twitterclone.HelperClass;
-using Microsoft.Extensions.Configuration;
+
 
 
 namespace twitterclone.Services;
@@ -13,49 +11,24 @@ namespace twitterclone.Services;
 public class AuthService : IAuthService
 {
     private readonly IUserRepository _userRepository;
-   private readonly IConfiguration _configuration;
+   
    private readonly IMongoCollection<User> _users;
     private readonly TokenHelper _tokenHelper;
 
-    private readonly EmailTemplate _emailTemplate;
-    public AuthService(IUserRepository userRepository,IConfiguration configuration ,EmailTemplate emailTemplate, IMongoDatabase database, TokenHelper tokenHelper)
+   // private readonly EmailSender _emailSender;
+   // private readonly EmailTemplate _emailTemplate;
+
+    
+    public AuthService(IUserRepository userRepository,IMongoDatabase database,EmailTemplate emailTemplate, TokenHelper tokenHelper, EmailSender emailSender)
     {
          _users = database.GetCollection<User>("users");
         _userRepository = userRepository;
-        _configuration=configuration;
         _tokenHelper = tokenHelper;
-        _emailTemplate=emailTemplate;
+      // _emailSender = emailSender; 
+       // _emailTemplate=emailTemplate;
        
 
     }
-
-public async Task SendEmailAsync(EmailDto emailDto)
-{
-
- var smtpClient = new SmtpClient
-        {
-            Host = _configuration["SmtpSettings:Server"],
-            Port = int.Parse(_configuration["SmtpSettings:Port"]),
-            EnableSsl = true,
-            Credentials = new NetworkCredential(
-                _configuration["SmtpSettings:Username"],
-                _configuration["SmtpSettings:Password"]
-            )
-        };
-
-        var mailMessage = new MailMessage
-        {
-            From = new MailAddress(_configuration["SmtpSettings:SenderEmail"], _configuration["SmtpSettings:SenderName"]),
-            Subject = emailDto.Subject,
-            Body = emailDto.Body,
-            IsBodyHtml = true
-        };
-
-        mailMessage.To.Add(emailDto.ToEmail);
-
-        await smtpClient.SendMailAsync(mailMessage);
-
-} 
 
 
    public async Task<AuthResultDots> SignInAsync(UserSignInDots signInDto)
@@ -100,20 +73,20 @@ public async Task SendEmailAsync(EmailDto emailDto)
     };
 
 
-var body = _emailTemplate.VerificationEmailTemplate.Replace("{verificationCode}", verificationToken);
+        // var body = _emailTemplate.VerificationEmailTemplate.Replace("{verificationCode}", verificationToken);
 
-        var emailDto = new EmailDto
-        {
-            ToEmail = newUser.Email,
-            Subject = "Verify Your Email",
-            Body = body
-        };
+        // var emailDto = new EmailDto
+        // {
+        //     ToEmail = newUser.Email,
+        //     Subject = "Verify Your Email",
+        //     Body = body
+        // };
 
-        await SendEmailAsync(emailDto);
+       // await _emailSender.SendEmailAsync(emailDto);
 
 
 
-    await CreateUserAsync(newUser);
+    await _userRepository.CreateUserAsync(newUser);
     var token =  _tokenHelper.GenerateToken(newUser);
 
 
@@ -144,11 +117,52 @@ var body = _emailTemplate.VerificationEmailTemplate.Replace("{verificationCode}"
     return new AuthResultDots { Success = true, Token = token,Message="User Created sucesssully",User=userDTO };
 }
 
+   public async Task<AuthResultDots> LoginAsync(LoginDots loginDto){
+    var user = await _userRepository.GetUserByUsername(loginDto.Username);
 
-
-
-    private  async Task CreateUserAsync(User user){
-        await _users.InsertOneAsync(user);
+    if(!BCrypt.Net.BCrypt.Verify(loginDto.Password, user.Password)){
+        return new AuthResultDots { Success = false, Message = "Invalid User credentials" };
     }
+   
+   var token =  _tokenHelper.GenerateToken(user);
+
+   var userDTO = new  UserDTO{
+    Id = user.Id,  
+    Username = user.Username,
+    FullName = user.FullName,
+    LastLogin = user.LastLogin,
+    IsVerified = user.IsVerified,
+    Email = user.Email,
+    Followers = user.Followers,
+    Following = user.Following,
+    IsFrozen = user.IsFrozen,
+    ProfileImg = user.ProfileImg,
+    Bio = user.Bio,
+    CreatedAt = user.CreatedAt,
+    UpdatedAt = user.UpdatedAt
+   };
+
+   return new AuthResultDots{ Success=true, Token=token, Message="User Logged In successfully",User=userDTO};
+
+}
+
+
+   
+ public async Task<AuthResultDots> LogoutAsync(string token)
+{
+    
+    var isTokenRevoked = await _tokenHelper.RevokeTokenAsync(token);
+
+    if (!isTokenRevoked)
+    {
+        return new AuthResultDots { Success = false, Message = "Logout failed. Token could not be revoked." };
+    }
+
+    
+    return new AuthResultDots { Success = true, Message = "Logout successful." };
+}
+
+
+    
 
 }
