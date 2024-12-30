@@ -24,6 +24,7 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 //builder.Services.AddTransient<IAuthService, EmailSender>();
 
 builder.Services.AddSingleton<EmailTemplate>();
+builder.Services.AddSingleton<EmailSender>();
 builder.Services.AddSingleton(sp =>
 {
     var secretKey = builder.Configuration["JwtSettings:Secret"];
