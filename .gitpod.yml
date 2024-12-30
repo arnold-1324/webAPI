@@ -1,0 +1,16 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - name: Install dependencies
+    init: |
+      sudo apt update
+      sudo apt install -y dotnet-sdk-8.0  
+    command: |
+      dotnet --version                    # Check if .NET SDK is installed successfully
+      dotnet restore                      # Restore dependencies for your project
+
+# ports:
+#   - port: 5000
+#     onOpen: open-preview
+
