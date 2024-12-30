@@ -21,7 +21,7 @@ public async Task<UserProfileDto> GetUserProfileDtoAsync(string  Username){
         return new UserProfileDto { Success = false, Message = "User Not Found" };
         
 
-  var userProfileDto = new ProfileDto{
+  var Profile = new ProfileDto{
      Id = user.Id,  
     Username = user.Username,
     FullName = user.FullName,
@@ -37,7 +37,7 @@ public async Task<UserProfileDto> GetUserProfileDtoAsync(string  Username){
 
 };
 
-return new UserProfileDto{ Success=true,  profile=userProfileDto};
+return new UserProfileDto{ Success=true,  profile=Profile};
     
 }
 

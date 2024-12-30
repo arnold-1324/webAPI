@@ -5,5 +5,5 @@ namespace twitterclone.Interfaces;
 
 public interface IUserService
 {
-   Task<UserProfileDto> GetUserProfileDtoAsync( UserName username);
+   Task<UserProfileDto> GetUserProfileDtoAsync( string username);
 }
