@@ -22,8 +22,9 @@ builder.Services.AddSingleton<IMongoDatabase>(sp =>
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 //builder.Services.AddTransient<IAuthService, EmailSender>();
-builder.Services.AddScoped<IUserService,Userservice>();
+builder.Services.AddScoped<IUserService,UserService>();
 builder.Services.AddSingleton<EmailTemplate>();
+builder.Services.AddHttpClient<UserService>();
 builder.Services.AddSingleton<EmailSender>();
 builder.Services.AddSingleton(sp =>
 {
@@ -102,6 +103,8 @@ builder.Services.AddSwaggerGen(c =>
 
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddEndpointsApiExplorer();
+
+
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
