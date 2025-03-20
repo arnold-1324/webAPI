@@ -7,7 +7,9 @@ namespace twitterclone.Controllers
     [ApiController]
     public class AdminController : ControllerBase
     {
-
-
+        public string getAdmin()
+        {
+            return "Admin";
+        }
     }
 }

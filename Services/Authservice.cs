@@ -19,9 +19,9 @@ public class AuthService : IAuthService
    // private readonly EmailTemplate _emailTemplate;
 
     
-    public AuthService(IUserRepository userRepository,IMongoDatabase database,EmailTemplate emailTemplate, TokenHelper tokenHelper, EmailSender emailSender)
+    public AuthService(IUserRepository userRepository,EmailTemplate emailTemplate, TokenHelper tokenHelper, EmailSender emailSender)
     {
-         _users = database.GetCollection<User>("users");
+       //  _users = database.GetCollection<User>("users");
         _userRepository = userRepository;
         _tokenHelper = tokenHelper;
       // _emailSender = emailSender; 

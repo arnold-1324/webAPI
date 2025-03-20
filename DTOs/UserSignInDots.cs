@@ -29,7 +29,9 @@ public class UserProfileDto
 
     public string? Message { get; set; }
 
-    public ProfileDto? profile{get;set;}
+    public ProfileDto? Profile{get;set;}
+
+     public string? Weather{get;set;}
 
 }
 
