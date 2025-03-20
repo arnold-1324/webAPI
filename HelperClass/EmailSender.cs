@@ -5,6 +5,7 @@ using twitterclone.HelperClass;
 using twitterclone.DTOs;
 public class EmailSender{
    
+
    
    private readonly IConfiguration _configuration;
 
@@ -16,7 +17,7 @@ public class EmailSender{
   public async Task SendEmailAsync(EmailDto emailDto)
 {
 
- var smtpClient = new SmtpClient
+     var smtpClient = new SmtpClient
         {
             Host = _configuration["SmtpSettings:Server"],
             Port = int.Parse(_configuration["SmtpSettings:Port"]),

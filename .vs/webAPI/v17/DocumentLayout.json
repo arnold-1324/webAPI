@@ -1,0 +1,303 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\80133\\webAPI\\twitterclone\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{45A9835B-8018-4A8B-B038-4EFF0032CB18}|twitterclone.csproj|c:\\users\\80133\\webapi\\twitterclone\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45A9835B-8018-4A8B-B038-4EFF0032CB18}|twitterclone.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45A9835B-8018-4A8B-B038-4EFF0032CB18}|twitterclone.csproj|c:\\users\\80133\\webapi\\twitterclone\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45A9835B-8018-4A8B-B038-4EFF0032CB18}|twitterclone.csproj|solutionrelative:services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45A9835B-8018-4A8B-B038-4EFF0032CB18}|twitterclone.csproj|c:\\users\\80133\\webapi\\twitterclone\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{45A9835B-8018-4A8B-B038-4EFF0032CB18}|twitterclone.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45A9835B-8018-4A8B-B038-4EFF0032CB18}|twitterclone.csproj|c:\\users\\80133\\webapi\\twitterclone\\helperclass\\tokenhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45A9835B-8018-4A8B-B038-4EFF0032CB18}|twitterclone.csproj|solutionrelative:helperclass\\tokenhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45A9835B-8018-4A8B-B038-4EFF0032CB18}|twitterclone.csproj|c:\\users\\80133\\webapi\\twitterclone\\dtos\\usersignindots.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45A9835B-8018-4A8B-B038-4EFF0032CB18}|twitterclone.csproj|solutionrelative:dtos\\usersignindots.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45A9835B-8018-4A8B-B038-4EFF0032CB18}|twitterclone.csproj|c:\\users\\80133\\webapi\\twitterclone\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45A9835B-8018-4A8B-B038-4EFF0032CB18}|twitterclone.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45A9835B-8018-4A8B-B038-4EFF0032CB18}|twitterclone.csproj|c:\\users\\80133\\webapi\\twitterclone\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45A9835B-8018-4A8B-B038-4EFF0032CB18}|twitterclone.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45A9835B-8018-4A8B-B038-4EFF0032CB18}|twitterclone.csproj|c:\\users\\80133\\webapi\\twitterclone\\helperclass\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45A9835B-8018-4A8B-B038-4EFF0032CB18}|twitterclone.csproj|solutionrelative:helperclass\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45A9835B-8018-4A8B-B038-4EFF0032CB18}|twitterclone.csproj|c:\\users\\80133\\webapi\\twitterclone\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45A9835B-8018-4A8B-B038-4EFF0032CB18}|twitterclone.csproj|solutionrelative:repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45A9835B-8018-4A8B-B038-4EFF0032CB18}|twitterclone.csproj|c:\\users\\80133\\webapi\\twitterclone\\dtos\\emaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45A9835B-8018-4A8B-B038-4EFF0032CB18}|twitterclone.csproj|solutionrelative:dtos\\emaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45A9835B-8018-4A8B-B038-4EFF0032CB18}|twitterclone.csproj|c:\\users\\80133\\webapi\\twitterclone\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45A9835B-8018-4A8B-B038-4EFF0032CB18}|twitterclone.csproj|solutionrelative:interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45A9835B-8018-4A8B-B038-4EFF0032CB18}|twitterclone.csproj|c:\\users\\80133\\webapi\\twitterclone\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45A9835B-8018-4A8B-B038-4EFF0032CB18}|twitterclone.csproj|solutionrelative:interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45A9835B-8018-4A8B-B038-4EFF0032CB18}|twitterclone.csproj|c:\\users\\80133\\webapi\\twitterclone\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45A9835B-8018-4A8B-B038-4EFF0032CB18}|twitterclone.csproj|solutionrelative:interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45A9835B-8018-4A8B-B038-4EFF0032CB18}|twitterclone.csproj|c:\\users\\80133\\webapi\\twitterclone\\dtos\\authresultdots.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45A9835B-8018-4A8B-B038-4EFF0032CB18}|twitterclone.csproj|solutionrelative:dtos\\authresultdots.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45A9835B-8018-4A8B-B038-4EFF0032CB18}|twitterclone.csproj|c:\\users\\80133\\webapi\\twitterclone\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45A9835B-8018-4A8B-B038-4EFF0032CB18}|twitterclone.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45A9835B-8018-4A8B-B038-4EFF0032CB18}|twitterclone.csproj|c:\\users\\80133\\webapi\\twitterclone\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45A9835B-8018-4A8B-B038-4EFF0032CB18}|twitterclone.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 11,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\80133\\webAPI\\twitterclone\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\80133\\webAPI\\twitterclone\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-04T14:03:14.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TokenHelper.cs",
+              "DocumentMoniker": "C:\\Users\\80133\\webAPI\\twitterclone\\HelperClass\\TokenHelper.cs",
+              "RelativeDocumentMoniker": "HelperClass\\TokenHelper.cs",
+              "ToolTip": "C:\\Users\\80133\\webAPI\\twitterclone\\HelperClass\\TokenHelper.cs*",
+              "RelativeToolTip": "HelperClass\\TokenHelper.cs*",
+              "ViewState": "AQIAACQAAAAAAAAAAAAiwDEAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T06:34:02.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\80133\\webAPI\\twitterclone\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\80133\\webAPI\\twitterclone\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAIwBgAAABYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T06:29:49.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Authcontroller.cs",
+              "DocumentMoniker": "C:\\Users\\80133\\webAPI\\twitterclone\\Controllers\\Authcontroller.cs",
+              "RelativeDocumentMoniker": "Controllers\\Authcontroller.cs",
+              "ToolTip": "C:\\Users\\80133\\webAPI\\twitterclone\\Controllers\\Authcontroller.cs",
+              "RelativeToolTip": "Controllers\\Authcontroller.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAAwC4AAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T10:43:28.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserSignInDots.cs",
+              "DocumentMoniker": "C:\\Users\\80133\\webAPI\\twitterclone\\DTOs\\UserSignInDots.cs",
+              "RelativeDocumentMoniker": "DTOs\\UserSignInDots.cs",
+              "ToolTip": "C:\\Users\\80133\\webAPI\\twitterclone\\DTOs\\UserSignInDots.cs*",
+              "RelativeToolTip": "DTOs\\UserSignInDots.cs*",
+              "ViewState": "AQIAAAoAAAAAAAAAAADwvyAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T08:40:46.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\80133\\webAPI\\twitterclone\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IUserService.cs",
+              "ToolTip": "C:\\Users\\80133\\webAPI\\twitterclone\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "Interfaces\\IUserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T08:20:28.67Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\80133\\webAPI\\twitterclone\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\80133\\webAPI\\twitterclone\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T06:31:35.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Authservice.cs",
+              "DocumentMoniker": "C:\\Users\\80133\\webAPI\\twitterclone\\Services\\Authservice.cs",
+              "RelativeDocumentMoniker": "Services\\Authservice.cs",
+              "ToolTip": "C:\\Users\\80133\\webAPI\\twitterclone\\Services\\Authservice.cs*",
+              "RelativeToolTip": "Services\\Authservice.cs*",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACEAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T06:31:47.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\80133\\webAPI\\twitterclone\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\80133\\webAPI\\twitterclone\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "Repositories\\UserRepository.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAIwA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T08:33:21.397Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EmailSender.cs",
+              "DocumentMoniker": "C:\\Users\\80133\\webAPI\\twitterclone\\HelperClass\\EmailSender.cs",
+              "RelativeDocumentMoniker": "HelperClass\\EmailSender.cs",
+              "ToolTip": "C:\\Users\\80133\\webAPI\\twitterclone\\HelperClass\\EmailSender.cs",
+              "RelativeToolTip": "HelperClass\\EmailSender.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAiwCgAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T09:21:16.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EmailDto.cs",
+              "DocumentMoniker": "C:\\Users\\80133\\webAPI\\twitterclone\\DTOs\\EmailDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\EmailDto.cs",
+              "ToolTip": "C:\\Users\\80133\\webAPI\\twitterclone\\DTOs\\EmailDto.cs",
+              "RelativeToolTip": "DTOs\\EmailDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAswAgAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T09:22:11.043Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\80133\\webAPI\\twitterclone\\Interfaces\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\80133\\webAPI\\twitterclone\\Interfaces\\IUserRepository.cs",
+              "RelativeToolTip": "Interfaces\\IUserRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T08:20:24.225Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\80133\\webAPI\\twitterclone\\Interfaces\\IAuthService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\80133\\webAPI\\twitterclone\\Interfaces\\IAuthService.cs",
+              "RelativeToolTip": "Interfaces\\IAuthService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T08:20:15.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AuthResultDots.cs",
+              "DocumentMoniker": "C:\\Users\\80133\\webAPI\\twitterclone\\DTOs\\AuthResultDots.cs",
+              "RelativeDocumentMoniker": "DTOs\\AuthResultDots.cs",
+              "ToolTip": "C:\\Users\\80133\\webAPI\\twitterclone\\DTOs\\AuthResultDots.cs",
+              "RelativeToolTip": "DTOs\\AuthResultDots.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAwBYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T08:16:07.143Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\80133\\webAPI\\twitterclone\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\80133\\webAPI\\twitterclone\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAowCEAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T06:32:06.885Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Userservice.cs",
+              "DocumentMoniker": "C:\\Users\\80133\\webAPI\\twitterclone\\Services\\Userservice.cs",
+              "RelativeDocumentMoniker": "Services\\Userservice.cs",
+              "ToolTip": "C:\\Users\\80133\\webAPI\\twitterclone\\Services\\Userservice.cs",
+              "RelativeToolTip": "Services\\Userservice.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T06:31:49.889Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

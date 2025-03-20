@@ -32,7 +32,7 @@ public class User
         public DateTime? ResetPasswordExpires { get; set; }
 
         public required string VerificationToken { get; set; }
-        public DateTime? VerificationTokenExpiresAt { get; set; }
+        public DateTime VerificationTokenExpiresAt { get; set; }
 
         [BsonRequired]
         [EmailAddress(ErrorMessage = "Invalid Email Address")] 
