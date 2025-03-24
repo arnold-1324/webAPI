@@ -1,7 +1,7 @@
 using twitterclone.DTOs;
 using twitterclone.Interfaces;
 using twitterclone.Models;
-using MongoDB.Driver;
+
 using twitterclone.HelperClass;
 
 
@@ -12,7 +12,6 @@ public class AuthService : IAuthService
 {
     private readonly IUserRepository _userRepository;
    
-   private readonly IMongoCollection<User> _users;
     private readonly TokenHelper _tokenHelper;
 
    // private readonly EmailSender _emailSender;

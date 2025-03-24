@@ -31,7 +31,6 @@ public class UserProfileDto
 
     public ProfileDto? Profile{get;set;}
 
-     public string? Weather{get;set;}
 
 }
 

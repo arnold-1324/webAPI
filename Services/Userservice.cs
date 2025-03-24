@@ -27,31 +27,9 @@ namespace twitterclone.Services
                 return new UserProfileDto { Success = false, Message = "User Not Found" };
             }
 
-            string weatherData = string.Empty;
-            try
-            {
-                var request = new HttpRequestMessage
-                {
-                    Method = HttpMethod.Get,
-                    RequestUri = new Uri("https://weatherapi-com.p.rapidapi.com/current.json?q=53.1%2C-0.13"),
-                };
+            
 
-                request.Headers.Add("x-rapidapi-key","c263dc9547msh6a3b8befac77f1ep1903f6jsn85c748a598a3");
-                request.Headers.Add("x-rapidapi-host", "weatherapi-com.p.rapidapi.com");
 
-                var response = await _httpClient.SendAsync(request);
-                response.EnsureSuccessStatusCode();
-
-                // Deserialize the response into a string or object
-                weatherData = await response.Content.ReadAsStringAsync();
-            }
-            catch (Exception ex)
-            {
-                // Assign error message if the API call fails
-                weatherData = $"Error: {ex.Message}";
-            }
-
-            // Return the UserProfileDto
             return new UserProfileDto
             {
                 Success = true,
@@ -69,8 +47,7 @@ namespace twitterclone.Services
                     ProfileImg = user.ProfileImg,
                     Bio = user.Bio,
                     CreatedAt = user.CreatedAt,
-                },
-                Weather = weatherData, // Now a string
+                }
             };
         }
     }

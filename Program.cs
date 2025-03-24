@@ -1,28 +1,23 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
-using MongoDB.Driver;
 using System.Text;
 using twitterclone.Interfaces;
 using twitterclone.Services;
 using twitterclone.Repositories;
 using twitterclone.HelperClass;
+using Microsoft.EntityFrameworkCore;
+using twitterclone;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Configuration.AddEnvironmentVariables();
 
-builder.Services.AddSingleton<IMongoClient>(new MongoClient(builder.Configuration["MongoDBSettings:ConnectionString"]));
-
-builder.Services.AddSingleton<IMongoDatabase>(sp =>
-{
-    var client = sp.GetRequiredService<IMongoClient>();
-    return client.GetDatabase(builder.Configuration["MongoDBSettings:DatabaseName"]);
-});
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
-//builder.Services.AddTransient<IAuthService, EmailSender>();
-builder.Services.AddScoped<IUserService,UserService>();
+builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddSingleton<EmailTemplate>();
 builder.Services.AddHttpClient<UserService>();
 builder.Services.AddSingleton<EmailSender>();
